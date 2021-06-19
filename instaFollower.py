@@ -39,7 +39,6 @@ class InstaFollower():
         time.sleep(1)
         self.driver.find_element_by_css_selector(".k9GMp .Y8-fY a").click()
         time.sleep(3)
-        # popup_body = self.driver.find_element_by_class_name("isgrP")
         scroll = 0
         while scroll < 10:
             popup_body = self.driver.find_element_by_xpath("/html/body/div[5]/div/div/div[2]")
@@ -52,7 +51,7 @@ class InstaFollower():
         for button in button_list:
             try:
                 button.click()
-                time.sleep(1.2)
+                time.sleep(1.5)
 
             except ElementClickInterceptedException:
                 self.driver.find_element_by_xpath("/html/body/div[6]/div/div/div/div[3]/button[2]").click()
